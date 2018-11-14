@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Coinz</string>
+    <string name="action_settings">Settings</string>
+    <string name="access_token">pk.eyJ1IjoiamVyZW15c2NvdHQiLCJhIjoiY2puYnh3N2JnMHVwcTNrcDh0cWw1YnpqOSJ9.yITMwPawi5IvoWR4YmkRcg</string>
+
+    <string name="walletTitle"><u>Wallet</u></string>
+
+    <string name="bankTitle"><u>Bank</u></string>
+    <string name="depositLimit"><i>The daily deposit limit is 25 coins.</i></string>
+
+    <string name="exchangeRateTitle"><u>Exchange Rate</u></string>
+</resources>
