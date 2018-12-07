@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pop_bg"
+    android:background="@drawable/pop_gray_bg"
     tools:context=".walletPopupActivity">
 
     <Button
@@ -38,73 +38,186 @@
         android:id="@+id/shilTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="SHIL - "
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/walletTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <TextView
+        android:id="@+id/shilValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <TextView
         android:id="@+id/dolrTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="DOLR - "
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shilTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/dolrValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/quidTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="QUID - "
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dolrTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle" />
+
+    <TextView
+        android:id="@+id/quidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle" />
 
     <TextView
         android:id="@+id/penyTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="PENY - "
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quidTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <TextView
+        android:id="@+id/penyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.7" />
 
     <TextView
         android:id="@+id/totalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Total = "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:textColor="#000000"
         android:textSize="20dp"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <TextView
+        android:id="@+id/totalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.9" />
 
     <TextView
         android:id="@+id/limitTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="92dp"
-        android:text="Limit = 100"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Limit = 150"
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/walletCloseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletTitle"
+        app:layout_constraintVertical_bias="0.97" />
 
 </android.support.constraint.ConstraintLayout>

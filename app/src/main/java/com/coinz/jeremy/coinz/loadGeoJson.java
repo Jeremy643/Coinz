@@ -9,8 +9,11 @@ import com.mapbox.mapboxsdk.annotations.MarkerOptions;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.Writer;
 import java.util.HashMap;
 
 public class loadGeoJson {
@@ -19,14 +22,17 @@ public class loadGeoJson {
 
     private static String path = "/data/data/com.coinz.jeremy.coinz/files/coinzmap.geojson";
 
-    private static JsonObject jsonObject;
+    static JsonObject jsonObject;
     private static File file = new File(path);
     private static JsonParser parser = new JsonParser();
+    static MapboxMap mapbox;
 
-    static HashMap<String, JsonArray> markersOnMap = new HashMap<String, JsonArray>();
+    static HashMap<String, JsonArray> markersOnMap = new HashMap<>();
 
     public static void displayMarkers(MapboxMap mapboxMap) {
         try {
+            mapbox = mapboxMap;
+
             Object obj = parser.parse(new FileReader(file));
 
             jsonObject = (JsonObject) obj;
@@ -64,7 +70,45 @@ public class loadGeoJson {
         }
     }
 
+    public static void removeMarkerFromFile(String closestID) {
+        try {
+            Object obj = parser.parse(new FileReader(file));
+
+            jsonObject = (JsonObject) obj;
+
+            JsonArray jsonArrayFeatures = jsonObject.getAsJsonArray("features");
+
+            for (int i = 0; i < jsonArrayFeatures.size(); i++) {
+                JsonObject feature = (JsonObject) jsonArrayFeatures.get(i);
+                JsonObject properties = (JsonObject) feature.get("properties");
+
+                //Get each marker's unique id.
+                String markerID = properties.get("id").getAsString();
+
+                if (closestID.equals(markerID)) {
+                    jsonArrayFeatures.remove(i);
+                    break;
+                }
+            }
+            Log.d(tag, "[removeMarkerFromFile] jsonArrayFeatures size: " + jsonArrayFeatures.size());
+
+            JsonObject jObject = new JsonObject();
+            jObject.add("features", jsonArrayFeatures);
+            obj = jsonObject;
+
+            //Save changed file.
+            Writer output = null;
+            File file = new File(path);
+            output = new BufferedWriter(new FileWriter(file));
+            output.write(String.valueOf(obj));
+            output.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static JsonObject getRates() {
+        //Get the exchange rate.
         JsonObject jsonObjectRates = new JsonObject();
 
         try {

@@ -6,6 +6,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,6 +37,19 @@
         <activity
             android:name=".exchangeRatePopupActivity"
             android:theme="@style/AppTheme.PopMe" />
+        <activity android:name=".collectCoins" />
+        <activity
+            android:name=".WelcometoCoinz"
+            android:label="Welcome to Coinz!" />
+        <activity
+            android:name=".depositPopupActivity"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity
+            android:name=".coinsCollectedActivity"
+            android:label="Coins Collected" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login"/>
     </application>
 
 </manifest>

@@ -3,8 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.coinz.jeremy.coinz.MainActivity">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/introductionCoinz"
+        android:title="Introduction" />
+    <item
+        android:id="@+id/coinsCollected"
+        android:title="Coins Collected" />
+    <item
+        android:id="@+id/emptyWallet"
+        android:title="Empty Wallet" />
+    <item
+        android:id="@+id/emptyBank"
+        android:title="Empty Bank" />
+    <item
+        android:id="@+id/shareCoins"
+        android:title="Share Coins" />
+    <item
+        android:id="@+id/loginButton"
+        android:title="Login" />
 </menu>
